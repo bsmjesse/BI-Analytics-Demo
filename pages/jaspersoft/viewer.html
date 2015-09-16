@@ -1,0 +1,2535 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>TIBCO Jaspersoft: Dashboard Viewer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!--
+    <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+    -->
+    <link rel="shortcut icon" href='/jasperserver-pro/_themes/2380BC9E/images/favicon.ico' />
+
+    <!--
+        <link rel="shortcut icon" href="favicon.ico" />
+    -->
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="stylesheet" href="themes/reset.css" type="text/css" media="screen">
+
+    <link rel="stylesheet" href="themes/2380BC9E/theme.css" type="text/css" media="screen,print" />
+    <link rel="stylesheet" href="themes/2380BC9E/pages.css" type="text/css" media="screen,print" />
+    <link rel="stylesheet" href="themes/2380BC9E/containers.css" type="text/css" media="screen,print" />
+    <link rel="stylesheet" href="themes/2380BC9E/dialog.css" type="text/css" media="screen,print" />
+    <link rel="stylesheet" href="themes/2380BC9E/buttons.css" type="text/css" media="screen,print" />
+    <link rel="stylesheet" href="themes/2380BC9E/lists.css" type="text/css" media="screen,print" />
+    <link rel="stylesheet" href="themes/2380BC9E/controls.css" type="text/css" media="screen,print" />
+    <link rel="stylesheet" href="themes/2380BC9E/dataDisplays.css" type="text/css" media="screen,print" />
+    <link rel="stylesheet" href="themes/2380BC9E/pageSpecific.css" type="text/css" media="screen,print" />
+    <link rel="stylesheet" href="themes/2380BC9E/dialogSpecific.css" type="text/css" media="screen,print" />
+    <link rel="stylesheet" href="themes/2380BC9E/forPrint.css" type="text/css" media="print" />
+
+    <!--[if IE 7.0]>
+    <link rel="stylesheet" href="/jasperserver-pro/_themes/2380BC9E/overrides_ie7.css" type="text/css" media="screen"/>
+    <![endif]-->
+    <!--[if IE 8.0]>
+    <link rel="stylesheet" href="/jasperserver-pro/_themes/2380BC9E/overrides_ie8.css" type="text/css" media="screen"/>
+    <![endif]-->
+    <!--[if IE]>
+    <link rel="stylesheet" href="/jasperserver-pro/_themes/2380BC9E/overrides_ie.css" type="text/css" media="screen"/>
+    <![endif]-->
+    <link rel="stylesheet" href="themes/2380BC9E/overrides_custom.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="scripts/bower_components/jquery-ui/themes/redmond/jquery-ui-1.10.4-custom.css"
+    type="text/css" media="screen">
+
+
+    <script type="text/javascript">
+        var JRS = {};
+
+        var __jrsConfigs__ = {
+
+            i18n: {},
+            localContext: {},
+            isIPad: "",
+            contextPath: "/jasperserver-pro",
+            publicFolderUri: "/public",
+            tempFolderUri: "/temp",
+            organizationId: "organization_1",
+            commonReportGeneratorsMetadata: [],
+            templatesFolderUri: '/public/templates',
+            defaultTemplateUri: '/public/templates/actual_size.510.jrxml',
+            advNotSelected: "To generate a report, first select an Ad Hoc view.",
+            templateNotSelected: "To generate a report using template generator, first select an Template.",
+            calendar: {
+
+                userLocale: "en_US",
+
+                timepicker: {
+                    timeText: 'Time:',
+                    hourText: 'Hour',
+                    minuteText: 'Minute',
+                    secondText: 'Second',
+                    currentText: 'Now',
+                    closeText: 'Close',
+                    timeFormat: 'HH:mm:ss',
+                    dateFormat: 'yy-mm-dd',
+                    separator: ' '
+                },
+
+                i18n: {
+                    bundledCalendarTimeFormat: 'HH:mm:ss',
+                    bundledCalendarFormat: 'yy-mm-dd'
+                }
+            },
+
+            webHelpModuleState: {
+                contextMap: { "default": "100", "bi_overview": "100", "login": "150", "legacy_dashboard": "200", "ad_hoc": "300", "domain": "500", "search": "600", "analysis": "700", "admin": "800", "repo": "900", "dashboard": "1000" },
+                hostURL: 'http://help.jaspersoft.com/js-help-v6-en/',
+                pagePrefix: 'Default_CSH.htm#'
+            },
+
+            urlContext: "/jasperserver-pro",
+            defaultSearchText: "",
+            serverIsNotResponding: "The server is slow or isn't responding. Confirm that you want to continue."
+        };
+
+        // dirty hack to get path to current theme
+        __jrsConfigs__.currentThemePath = "_themes/2380BC9E/theme.css".split("/").slice(0, -1).join("/");
+
+        __jrsConfigs__.isProVersion = "true" === "true" ? true : false;
+
+        __jrsConfigs__.userLocale = "en_US";
+
+        __jrsConfigs__.isFreeOrLimitedEdition = false;
+
+        //TODO: get it from the server
+        __jrsConfigs__.avaliableLocales = ["de", "en", "es", "fr", "it", "ja", "ro", "zh_TW", "zh_CN"];
+
+
+        __jrsConfigs__.localeSettings = {
+            locale: "en_US",
+            decimalSeparator: "" || ".",
+            groupingSeparator: "" || ",",
+            timeFormat: "HH:mm:ss",
+            dateFormat: "yy-mm-dd",
+            timestampSeparator: " "
+        };
+        //Heartbeat
+
+        __jrsConfigs__.heartbeatInitOptions = {
+            baseUrl: "/jasperserver-pro",
+            showDialog: false,
+            sendClientInfo: false
+        };
+
+        __jrsConfigs__.initAdditionalUIComponents = true;
+
+        __jrsConfigs__.flowExecutionKey = "";
+
+        if (window.localStorage && window.localStorage.previousPageHash) {
+            window.location.hash = window.localStorage.previousPageHash;
+            delete window.localStorage.previousPageHash;
+        }
+    </script>
+
+
+
+
+
+    <script type="text/javascript" src="/jasperserver-pro/optimized-scripts/bower_components/requirejs/require.js"></script>
+    <script type="text/javascript" src="/jasperserver-pro/optimized-scripts/require.config.js"></script>
+    <script type="text/javascript">
+        require.config({
+            baseUrl: "/jasperserver-pro/optimized-scripts"
+        });
+    </script>
+
+
+    <script type="text/javascript" src="/jasperserver-pro/optimized-scripts/bower_components/jquery/dist/jquery.js"></script>
+
+
+
+    <script type="text/javascript" src="/jasperserver-pro/scripts/bower_components/prototype/dist/prototype.js"></script>
+
+
+    <script type="text/javascript">
+        define("prototype", $);
+    </script>
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        require(["dashboardViewerPage"]);
+    </script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+<body id="dashboard" class="">
+    <div id="banner" class="banner" style="">
+        <div id="systemMessageConsole" style="display:none">
+            <p id="systemMessage">Close</p>
+        </div>
+        <div id="logo" class="sectionLeft"></div>
+        <div class="sectionLeft">
+
+            <div id="mainNavigation" class="menu horizontal primaryNav">
+                <ul id="navigationOptions" data-tab-index="2" data-component-type="navigation">
+                    <li id="main_home" tabIndex="-1" class="leaf hidden">
+                        <p class="wrap button"><span class="icon"></span>Home</p>
+                    </li>
+
+                    <li id="main_library" tabIndex="-1" class="leaf hidden">
+                        <p class="wrap button"><span class="icon"></span>Library</p>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="sectionRight searchContainer">
+            <!-- banner search -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <span id="globalSearch" class="control searchLockup " data-tab-index='1' data-component-type='search'>
+                <label for="searchInput" class="offLeft">Search</label>
+                <div class="wrap"><input type="text" class="" id="searchInput" tabIndex="-1" /></div>
+                <b class="right"><a class="button searchClear"></a></b>
+                <a class="button search up"></a>
+            </span>
+
+
+
+
+        </div>
+        <ul id="metaLinks" class="sectionRight">
+            <li id="userID">
+
+                <span id="casted">
+
+                </span> Joe&#32;User
+
+            </li>
+
+            <li id="help"><a href="#" id="helpLink">Help</a></li>
+            <li id="main_logOut" class="last"><a id="main_logOut_link">Log Out</a></li>
+        </ul>
+    </div>
+
+    <div id="frame" style="">
+        <div class="content">
+            <!--/WEB-INF/jsp/templates/page.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+            <div id="display" class="body oneColumn dashboardViewer">
+                <a name="maincontent" id="maincontent"></a>
+
+
+            </div>
+            <!-- /#display -->
+        </div>
+    </div>
+
+    <div id="frameFooter" style="">
+        <p id="about">
+            <a href="#">About TIBCO JasperReports Server</a>
+
+            <span id="license">
+                (Development License)
+            </span>
+
+        </p>
+        <p id="copyright">Copyright &copy; 2005-2015 TIBCO Software Inc.</p>
+    </div>
+
+    <div id="templateElements">
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id='menu' class="menu vertical context hidden"></div>
+
+        <div id="commonMenu" class="hidden">
+            <div class="content">
+                <ul id="menuList_template"></ul>
+            </div>
+        </div>
+
+        <ul class="hidden">
+
+            <li id="menuList_simpleAction" class="leaf">
+                <p class="wrap button"><span class="icon"></span>
+                    <!--Item text goes here-->
+                </p>
+            </li>
+
+
+            <li id="menuList_separator" class="leaf separator"></li>
+
+
+            <li id="menuList_flyout" class="node">
+                <p class="wrap button"><span class="icon"></span>
+                    <!--Item text goes here-->
+                </p>
+            </li>
+
+
+            <li id="menuList_extraInput" class="leaf">
+                <p class="wrap button"><span class="icon"></span>
+                    <!--Item text goes here-->
+                </p>
+            </li>
+
+
+            <li id="menuList_listItem" class="leaf">
+                <p class="wrap toggle button"><span class="icon"></span>
+                    <!--Item text goes here-->
+                </p>
+            </li>
+
+
+
+            <li id="navigation_mutton" tabIndex="-1" class="node mutton">
+                <p class="wrap button"><span class="icon"></span></p>
+            </li>
+        </ul>
+
+
+
+        <div id="listTemplateHolder" style="display:none">
+
+            <!-- default template for flat lists-->
+            <ul id="defaultListTemplate" class="list">
+                <!-- default template for items of flat lists -->
+                <li id="dynamicListItemTemplate" class="leaf">
+                    <p class="wrap button "></p>
+                </li>
+
+            </ul>
+
+            <!-- Template used for filter path in search -->
+            <ul id="list_control_path" class="list control path">
+                <!-- Template for label of the path
+                    States (possible class name changes) :
+                        * first - if item is first in the list
+                        * last - if item is last in the list
+                        * selected - if item is selected in the list
+                -->
+                <li id="list_control_path:label" class="label">
+                    <p class="wrap button "></p>
+                </li>
+                <!-- Template for items of the path
+                    States (possible class name changes) :
+                        * first - if item is first in the list
+                        * last - if item is last in the list
+                        * selected - if item is selected in the list
+                -->
+                <li id="list_control_path:step" class="step">
+                    <p class="wrap button "></p>
+                </li>
+            </ul>
+
+            <!-- Template used for sorters in search -->
+            <ul id="tabSet_control_horizontal_responsive" class="list tabSet text control horizontal">
+                <!--
+                    Template of resource item in the list
+                    States (possible class name changes) :
+                        * first - if item is first in the list
+                        * last - if item is last in the list
+                        * selected - if item is selected in the list
+                -->
+                <li id="tabSet_control_horizontal_responsive:label" class="label">
+                    <p class="wrap"></p>
+                </li>
+                <!-- Template for sort option
+                    States (possible class name changes) :
+                        * first - if item is first in the list
+                        * last - if item is last in the list
+                        * selected - if item is selected in the list
+                -->
+                <li id="tabSet_control_horizontal_responsive:tab" class="tab">
+                    <p class="wrap button "></p>
+                </li>
+            </ul>
+
+            <!-- Template used for list of resources in search -->
+            <ul id="tabular_fourColumn_resources" class="list collapsible tabular resources fourColumn">
+                <!--
+                    Template of resource item in the list
+                    States (possible class name changes) :
+                        * first - if item is first in the list
+                        * last - if item is last in the list
+                        * leaf - default item.
+                        * node - if has children resources (e.g. Report Options).
+                        * open - if resource has children and they showed
+                        * closed - if resource has children and they hidden
+                        * selected - if item is selected in the list
+                        * scheduled - if resource is scheduled
+                -->
+                <li id="tabular_fourColumn_resources:leaf" class="resources">
+                    <div class="wrap button draggable">
+                        <div class="column one">
+                            <div class="scheduled icon button"></div>
+                            <div class="separator"></div>
+                            <div class="disclosure icon button"></div>
+                        </div>
+                        <div class="column two">
+                            <h3 class="resourceName"><a></a></h3>
+                            <p class="resourceDescription"></p>
+                        </div>
+                        <div class="column three resourceType"></div>
+                        <div class="column four">
+                            <p class="createdDate"></p>
+                            <p class="modifiedDate"></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Template used for list of resources in search -->
+            <ul id="tabular_fourColumn_resources_sublist" class="list collapsible tabular resources fourColumn sublist">
+                <!--
+                    Template of resource item in the list
+                    States (possible class name changes) :
+                        * first - if item is first in the list
+                        * last - if item is last in the list
+                        * leaf - default item.
+                        * node - if has children resources (e.g. Report Options).
+                        * open - if resource has children and they showed
+                        * closed - if resource has children and they hidden
+                        * selected - if item is selected in the list
+                        * scheduled - if resource is scheduled
+                -->
+                <li id="tabular_fourColumn_resources_sublist:leaf" class="resources">
+                    <div class="wrap button draggable">
+                        <div class="column one">
+                            <div class="scheduled icon button">&nbsp;</div>
+                            <div class="separator"></div>
+                            <div class="disclosure icon button">&nbsp;</div>
+                        </div>
+                        <div class="column two">
+                            <h3 class="resourceName"><a></a></h3>
+                            <p class="resourceDescription"></p>
+                        </div>
+                        <div class="column three resourceType"></div>
+                        <div class="column four">
+                            <p class="createdDate"></p>
+                            <p class="modifiedDate"></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Template used for list of users in user management -->
+            <ol id="tabular_threeColumn" class="list tabular collapsible threeColumn">
+                <!--
+                    Template of resource item in the list
+                    States (possible class name changes) :
+                        * first - if item is first in the list
+                        * last - if item is last in the list
+                        * selected - if item is selected in the list
+                -->
+                <li id="tabular_threeColumn:leaf" class="leaf">
+                    <div class="wrap button ">
+                        <div class="column one">
+                            <h3 class="ID"><a></a></h3>
+                        </div>
+                        <div class="column two">
+                            <p class="name"></p>
+                        </div>
+                        <div class="column three">
+                            <p class="organization"></p>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+
+            <!-- Template used for list of users in user management -->
+            <ol id="tabular_twoColumn" class="list tabular collapsible twoColumn">
+                <!--
+                    Template of resource item in the list
+                    States (possible class name changes) :
+                        * first - if item is first in the list
+                        * last - if item is last in the list
+                        * selected - if item is selected in the list
+                -->
+                <li id="tabular_twoColumn:leaf" class="leaf">
+                    <div class="wrap button ">
+                        <div class="column one">
+                            <h3 class="ID"><a></a></h3>
+                        </div>
+                        <div class="column two">
+                            <p class="name"></p>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+
+            <!-- Template used for list of dependet reports in ad hoc designer -->
+            <ol id="tabular_oneColumn" class="list tabular oneColumn">
+                <!--
+                    Template of resource item in the list
+                    States (possible class name changes) :
+                        * first - if item is first in the list
+                        * last - if item is last in the list
+                        * selected - if item is selected in the list
+                -->
+                <li id="tabular_oneColumn:leaf" class="leaf">
+                    <div class="wrap">
+                        <div class="column one">
+                            <p class="uri"></p>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+
+            <!-- Template used for list of role in role management -->
+            <ol id="tabular_twoColumn:roles" class="list tabular twoColumn">
+                <!--
+                    Template of resource item in the list
+                    States (possible class name changes) :
+                        * first - if item is first in the list
+                        * last - if item is last in the list
+                        * selected - if item is selected in the list
+                -->
+                <li id="tabular_twoColumn:roles:leaf" class="leaf">
+                    <div class="wrap button ">
+                        <div class="column one">
+                            <h3 class="ID"></h3>
+                        </div>
+                        <div class="column two">
+                            <p class="organization"></p>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+
+            <!-- Template used for list of role in role management -->
+            <ol id="tabular_oneColumn:roles" class="list tabular collapsible oneColumn">
+                <!--
+                    Template of resource item in the list
+                    States (possible class name changes) :
+                        * first - if item is first in the list
+                        * last - if item is last in the list
+                        * selected - if item is selected in the list
+                -->
+                <li id="tabular_oneColumn:roles:leaf" class="leaf">
+                    <div class="wrap button ">
+                        <div class="column one">
+                            <h3 class="ID"></h3>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+
+            <!-- Template used for list of resource children list in search (e.g Report Options)-->
+            <ol id="tabular_twoColumn_resources" class="list tabular resources twoColumn">
+                <!--
+                    Template of resource child item in the list
+                    States (possible class name changes) :
+                        * selected - if item is selected in the list
+                        * scheduled - if resource is scheduled
+                -->
+                <li id="tabular_twoColumn_resources:leaf" class="resources leaf">
+                    <div class="wrap button ">
+                        <div class="column one">
+                            <div class="scheduled icon button"></div>
+                        </div>
+                        <div class="column two">
+                            <h3 class="resourceName"><a></a></h3>
+                            <p class="resourceDescription"></p>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+
+
+            <!-- Template used for list of permissions for resource-->
+            <ul id="tabular_twoColumn_setLeft" class="list setLeft tabular twoColumn">
+                <!--
+                    Template of permission item for user or role
+                    -->
+                <li id="tabular_twoColumn_setLeft:leaf" class="leaf">
+                    <div class="wrap">
+                        <b class="icon"></b>
+                        <p class="column one">
+                            <a class="launcher"></a>
+                        </p>
+                        <p class="column two">
+                            <select></select>
+                        </p>
+                    </div>
+                </li>
+                <li id="tabular_twoColumn_setLeft:loading" class="leaf loading">
+                    <div class="wrap">
+                        <b class="icon"></b>
+                        <p class="column one">
+                            <a class="launcher"></a>
+                        </p>
+                        <p class="column two">
+                        </p>
+                    </div>
+                </li>
+            </ul>
+
+
+            <ul id="inputControls_option_list" class="list setLeft tabular twoColumn">
+                <li id="inputControls_option_list:header" class="leaf">
+                    <div class="wrap header">
+                        <b class="icon" title=""></b>
+                        <p class="column one">
+                            <span class="label">Input Control</span>
+                        </p>
+                        <p class="column two">
+                            <span class="label">URL Parameter Name</span>
+                        </p>
+                    </div>
+                </li>
+
+
+                <li id="inputControls_option_list:control" class="leaf">
+                    <div class="wrap">
+                        <b class="icon" title=""></b>
+                        <div class="column one">
+                            <div class="control checkBox">
+                                <label id="label_for_param_1" class="wrap" for="parameter_1"></label>
+                                <input id="parameter_1" type="checkbox" value="" />
+                            </div>
+                        </div>
+                        <div class="column two">
+                            <label id="label_for_param_1_value" class="control input text" for="parameter_1_value">
+                                <input id="parameter_1_value" type="text" value="Country" />
+                            </label>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <ul id="list_responsive_filters" class="list filters">
+
+                <li id="list_responsive_filters:leaf" class="leaf">
+                    <p class="wrap button"><b class="icon"></b></p>
+                </li>
+
+
+                <li id="list_responsive_filters:node" class="node closed">
+                    <p class="wrap button separator">
+                        <b class="icon"></b>
+                        <a class="more launcher">More choices&#8230;</a>
+                        <a class="fewer launcher">Fewer choices</a>
+                    </p>
+                </li>
+
+
+                <li id="list_responsive_filters:separator" class="leaf">
+                    <p class="wrap button"><b class="icon"></b></p>
+                </li>
+            </ul>
+
+            <ul id="list_domain_bundles">
+                <li id="list_domain_bundles:leaf" class="leaf">
+                    <div class="wrap button ">
+                        <b class="icon" title=""></b>
+                        <p class="column one">
+                            <a class="emphasis"></a>
+                        </p>
+                        <p class="column two">
+                            <a class="launcher"></a> |
+                            <a class="launcher"></a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+
+            <ul id="list_fourColumn_type_message" class="list tabular type_messages fourColumn">
+                <li id="list_fourColumn_type_message:header" class="leaf">
+                    <div class="wrap header type_messages">
+                        <div class="column one">
+                            <p class="subject" title="Message subject">Subject</p>
+                        </div>
+                        <div class="column two">
+                            <p class="date" title="Event Date">Date</p>
+                        </div>
+                        <div class="column three">
+                            <p class="type" title="Event Type">Type</p>
+                        </div>
+                        <div class="column four">
+                            <p class="component" title="Affected Component">Component</p>
+                        </div>
+                    </div>
+                </li>
+                <li id="list_fourColumn_type_message:unread" class="leaf">
+                    <div class="wrap button type_messages unread">
+                        <div class="column one">
+                            <h3 class="subject" title="Message subject"><a></a></h3>
+                        </div>
+                        <div class="column two">
+                            <p class="date" title=""></p>
+                        </div>
+                        <div class="column three">
+                            <p class="type" title="Event Type"></p>
+                        </div>
+                        <div class="column four">
+                            <p class="component" title="Affected Component"></p>
+                        </div>
+                    </div>
+                </li>
+                <li id="list_fourColumn_type_message:read" class="leaf">
+                    <div class="wrap button type_messages">
+                        <div class="column one">
+                            <h3 class="subject" title="Message subject"><a></a></h3>
+                        </div>
+                        <div class="column two">
+                            <p class="date" title=""></p>
+                        </div>
+                        <div class="column three">
+                            <p class="type" title="Event Type"></p>
+                        </div>
+                        <div class="column four">
+                            <p class="component" title="Affected Component"></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+
+            <ul id="list_responsive_fields" class="list fields">
+                <li id="list_responsive_fields:leaf" class="leaf"><a href="list.jsp#" class="wrap button "><b class="icon"></b></a></li>
+            </ul>
+
+            <ul id="list_type_attributes" class="list type_attributes">
+                <li id="list_type_attributes:role" class="leaf">
+                    <a href="list.jsp#" class="wrap button launcher"></a><span class="separator">,</span></li>
+                <li id="list_type_attributes:role:last" class="leaf">
+                    <a href="list.jsp#" class="wrap button launcher"></a>
+                </li>
+                <li id="list_type_attributes:user" class="leaf">
+                    <a href="list.jsp#" class="wrap button launcher"></a>,&nbsp;</li>
+                <li id="list_type_attributes:user:last" class="leaf">
+                    <a href="list.jsp#" class="wrap button launcher"></a>
+                </li>
+                <li id="list_type_attributes:profileAttribute" class="leaf">,&nbsp;</li>
+                <li id="list_type_attributes:profileAttribute:last" class="leaf"></li>
+            </ul>
+
+            <ul id="list_domain_chooser_filter" class="list tabular filters twoColumn">
+                <li id="list_domain_chooser_filter:leaf" class="leaf">
+                    <div class="wrap readonly">
+                        <div class="column one condition">
+                            <span class="fieldName"></span>
+                            <span class="operation"></span>
+                            <span class="value"></span>
+                        </div>
+                        <div class="column two">
+                            <span class="lock"></span>
+                            <span class="actions">
+                                <a class="launcher button change">Change</a> |
+                                <a class="launcher button remove">Remove</a>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <ul id="list_domain_designer_joins" class="list tabular fourColumn">
+                <li id="list_domain_designer_joins:leaf" class="leaf">
+                    <div class="wrap">
+                        <b class="icon"></b>
+                        <p class="column one"></p>
+                        <p class="column two"></p>
+                        <p class="column three">
+                            <select>
+                                <option selected="selected" value="inner">Inner</option>
+                                <option value="leftOuter">Left Outer</option>
+                                <option value="rightOuter">Right Outer</option>
+                                <option value="fullOuter">Full Outer</option>
+                            </select>
+                        </p>
+                        <p class="column four"><a class="launcher button">Remove</a></p>
+                    </div>
+                </li>
+            </ul>
+
+
+            <ul id="list_fields_hideRoot_column_simple" class="list collapsible fields hideRoot column simple">
+                <!--
+                    Template of sort fild
+                    States (possible class name changes) :
+                        * ascending - asc sorting by this filed
+                        * descending - desc sorting by this field
+                -->
+                <li id="list_fields_hideRoot_column_simple:leaf" class="leaf ascending">
+                    <div class="wrap button draggable"><b class="icon button"></b></div>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div id="treeTemplateHolder" style="display:none">
+
+            <ul id="list_responsive_collapsible" class="list collapsible">
+
+                <li id="list_responsive_collapsible:leaf" class="leaf">
+                    <p class="wrap button draggable"><b class="icon"></b></p>
+                </li>
+
+
+                <li id="list_responsive_collapsible:loading" class="node loading">
+                    <p class="wrap button draggable"><b class="icon"></b></p>
+                </li>
+            </ul>
+
+            <ul id="list_responsive_collapsible_folders" class="list collapsible folders">
+                <li id="list_responsive_collapsible_folders:folders" class="folders">
+                    <p class="wrap button draggable"><b class="icon"></b></p>
+                </li>
+
+            </ul>
+
+
+            <ul id="list_responsive_collapsible_folders_specialContent" class="list collapsible folders">
+                <li id="list_responsive_collapsible_folders_specialContent:folders" class="node specialContent">
+                    <p class="wrap button "><b class="icon"></b></p>
+                </li>
+
+                <li id="list_responsive_collapsible_folders_specialContent:leaf" class="leaf">
+                    <p class="wrap button draggable"><b class="icon"></b></p>
+                </li>
+            </ul>
+
+
+            <ul id="list_responsive_collapsible_fields" class="list collapsible fields">
+                <li id="list_responsive_collapsible_fields:fields" class="fields">
+                    <p class="wrap button draggable"><span class="icon button"></span></p>
+                </li>
+            </ul>
+
+
+            <ul id="list_responsive_collapsible_type_tables" class="list collapsible type_tables">
+                <li id="list_responsive_collapsible_type_tables:tables" class="type_tables">
+                    <p class="wrap button draggable"><span class="icon button"></span></p>
+                </li>
+
+
+                <li id="list_responsive_collapsible_type_tables:fields" class="type_tables">
+                    <p class="wrap"><span class="icon noBubble"></span></p>
+                </li>
+            </ul>
+
+
+            <ul id="list_responsive_collapsible_type_sets" class="list collapsible type_sets column simple">
+                <li id="list_responsive_collapsible_type_sets:sets" class="set">
+                    <p class="wrap button draggable"><span class="icon button"></span></p>
+                </li>
+            </ul>
+
+
+            <ul id="list_responsive" class="list collapsible">
+                <li id="list_responsive:twoColumn">
+                    <div class="wrap button"><span class="icon button"></span>
+                        <p class="column one"></p>
+                        <p class="column two"></p>
+                    </div>
+                </li>
+            </ul>
+
+
+            <input id="list_responsive_collapsible:input" type="text" value="" />
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="jsTooltip" class="panel info tooltip hidden">
+
+
+
+
+            <div class="content ">
+
+                <div class="header ">
+                    <div class="title">
+
+                    </div>
+
+
+                </div>
+
+                <div class="body  ">
+
+
+                    <p class="message"></p>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="orgTooltip" class="panel info tooltip hidden">
+
+
+
+
+            <div class="content ">
+
+                <div class="header ">
+                    <div class="title">
+
+                    </div>
+
+
+                </div>
+
+                <div class="body  ">
+
+
+                    <p class="message label">Organization</p>
+                    <p class="message"></p>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="fullNameTooltip" class="panel info tooltip hidden">
+
+
+
+
+            <div class="content ">
+
+                <div class="header ">
+                    <div class="title">
+
+                    </div>
+
+
+                </div>
+
+                <div class="body  ">
+
+
+                    <p class="message label">Full Name</p>
+                    <p class="message"></p>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="fullNameAndOrgTooltip" class="panel info tooltip hidden">
+
+
+
+
+            <div class="content ">
+
+                <div class="header ">
+                    <div class="title">
+
+                    </div>
+
+
+                </div>
+
+                <div class="body  ">
+
+
+                    <p class="message label">Full Name</p>
+                    <p class="message"></p>
+                    <p class="message label">Organization</p>
+                    <p class="message"></p>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="resourceNameTooltip" class="panel info tooltip hidden">
+
+
+
+
+            <div class="content ">
+
+                <div class="header ">
+                    <div class="title">
+
+                    </div>
+
+
+                </div>
+
+                <div class="body  ">
+
+
+                    <p class="message label">Name: </p>
+                    <p class="message"></p>
+                    <p class="message label">Path: </p>
+                    <p class="message"></p>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <div style="display:none;">
+
+            <div id="column_two" class="column two">
+                <h3 id="column_two:resourceName" class="resourceName" item="item"><a></a></h3>
+            </div>
+
+        </div>
+
+
+        <!-- save as dialog -->
+        <!--/WEB-INF/jsp/templates/saveAs.jsp revision A-->
+        <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="saveAs" class="panel dialog overlay saveAs sizeable moveable hidden centered_vert centered_horz">
+
+            <div class="sizer diagonal"></div>
+
+            <div class="content hasFooter ">
+
+
+                <div class="header mover">
+                    <div class="title">
+                        Save As
+                    </div>
+
+
+                </div>
+
+                <div class="body  ">
+
+
+                    <label class="control input text" accesskey="o" for="saveAsInputName" title="This will be the visible name for the resource and can be changed">
+                        <span class="wrap">Name (required):</span>
+                        <input class="" id="saveAsInputName" type="text" value="" />
+                        <span class="message warning"></span>
+                    </label>
+                    <label class="control textArea" for="saveAsInputDescription">
+                        <span class="wrap">Description:</span>
+                        <textarea id="saveAsInputDescription" type="text"> </textarea>
+                        <span class="message warning"></span>
+                    </label>
+
+
+
+
+
+
+
+
+
+
+
+                    <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="control groupBox">
+
+
+
+
+                        <div class="content ">
+
+                            <div class="header ">
+                                <div class="title">
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="body  ">
+
+
+                                <ul class="responsive collapsible folders hideRoot" id="saveAsFoldersTree"></ul>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+                <div class="footer ">
+
+                    <button id="saveAsBtnSave" class="button action primary up"><span class="wrap">Save<span class="icon"></span></button>
+                    <button id="saveAsBtnCancel" class="button action up"><span class="wrap">Cancel<span class="icon"></span></button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="repositorySelectionDialog" class="panel dialog overlay repositorySelectionDialog sizeable moveable hidden centered_vert centered_horz">
+
+            <div class="sizer diagonal"></div>
+
+            <div class="content hasFooter ">
+
+
+                <div class="header mover">
+                    <div class="title">
+                        Create Report
+                    </div>
+
+
+                </div>
+
+                <div class="body  ">
+
+
+                    <span class="wrap">To begin creating a report, select an Ad Hoc view.</span>
+
+
+
+
+
+
+
+
+
+
+                    <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="control groupBox">
+
+
+
+
+                        <div class="content ">
+
+                            <div class="header ">
+                                <div class="title">
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="body  ">
+
+
+                                <ul class="responsive collapsible repositoryTree hideRoot"></ul>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="footer ">
+
+                    <button class="button action primary up okButton"><span class="wrap">OK<span class="icon"></span></button>
+                    <button class="button action up cancelButton"><span class="wrap">Cancel<span class="icon"></span></button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <form id="reportGeneratorForm" action="/jasperserver-pro/reportGenerator.html" method="get" style="display:none">
+            <input type="hidden" name="action" value="displayTempReportUnit" />
+            <input type="hidden" name="advUri" value="" />
+            <input type="hidden" name="template" value="" />
+            <input type="hidden" name="generator" value="" />
+            <input type="hidden" name="exportFormat" value="html" />
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--/WEB-INF/jsp/templates/reportGeneratorProperties.jsp revision A-->
+        <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="reportGeneratorProperties" class="panel dialog overlay moveable sizeable centered_horz centered_vert hidden">
+
+            <div class="sizer diagonal"></div>
+
+            <div class="content hasFooter ">
+
+
+                <div class="header mover">
+                    <div class="title">
+                        Create Report
+                    </div>
+
+
+                </div>
+
+                <div class="body  ">
+
+
+                    <div id="advTreePanel" class="hidden">
+                        <span class="wrap">To begin creating a report, select an Ad Hoc view.</span>
+
+
+
+
+
+
+
+
+
+
+
+                        <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="control groupBox">
+
+
+
+
+                            <div class="content ">
+
+                                <div class="header ">
+                                    <div class="title">
+
+                                    </div>
+
+
+                                </div>
+
+                                <div class="body  ">
+
+
+                                    <ul class="responsive collapsible folders hideRoot" id="advLocationTree"></ul>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                    <!--/WEB-INF/jsp/templates/generatorSelect.jsp revision A-->
+                    <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div id="commonGeneratorSelect" class="control groupBox generatorSelect">
+
+
+
+
+                        <div class="content ">
+
+                            <div class="header ">
+                                <div class="title">
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="body  ">
+
+
+                                <fieldset class="group locationSelector">
+                                    <legend class=""><span>Generate Report with:</span></legend>
+                                    <ul class="list locations">
+                                        <li class="leaf">
+                                            <div class="control radio">
+                                                <label class="wrap" for="commonGeneratorSelectDefaultTemplateRadio" title="Default template will be used to create report">
+                                                    Default Report Template
+                                                </label>
+                                                <input id="commonGeneratorSelectDefaultTemplateRadio" type="radio" name="commonGeneratorSelect" checked="checked" />
+                                                <span class="message warning">error message here</span>
+                                            </div>
+                                        </li>
+                                        <li class="leaf">
+                                            <div class="control radio complex">
+                                                <label class="wrap" for="commonGeneratorSelectReportTemplateRadio" title="Select template from repository">
+                                                    Custom Report Template
+                                                </label>
+                                                <!-- ID of radio should match to ID of input to without "Radio" prefix -->
+                                                <input id="commonGeneratorSelectReportTemplateRadio" type="radio" name="commonGeneratorSelect" />
+                                                <span class="message warning">error message here</span>
+                                            </div>
+                                            <div id="browseTemplate" class="control input file" for="filePath" title="Select template from repository">
+                                                <label class="control browser" for="commonGeneratorSelectReportTemplate" title="Define a path in the repository">
+                                                    <span class="wrap"></span>
+                                                    <!-- ID of input should match to ID of radio without "Radio" prefix -->
+                                                    <input class="" id="commonGeneratorSelectReportTemplate" type="text" value="" />
+                                                    <button class="button action" id="customTemplateBrowser" type="button">
+                                                        <span class="wrap">Browse&#133;</span>
+                                                        <span class="icon"></span>
+                                                    </button>
+                                                    <span class="message warning">error message here</span>
+                                                    <ul id="commonGeneratorSelectDefaultTemplateRadio" class="responsive collapsible folders hideRoot"></ul>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="leaf">
+                                            <div class="control radio">
+                                                <label class="wrap" for="commonGeneratorSelectReportGeneratorRadio" title="Chose available report generator">
+                                                    Report Generator
+                                                </label>
+                                                <!-- ID of radio should match to ID of select without "Radio" prefix -->
+                                                <input id="commonGeneratorSelectReportGeneratorRadio" type="radio" name="commonGeneratorSelect" data-innput-control />
+                                                <span class="message warning">error message here</span>
+                                            </div>
+                                            <div id="selectGeneratorControl" class="control input">
+                                                <label class="control browser" for="commonGeneratorSelectReportGenerator" title="Chose available report generator">
+                                                    <span class="wrap"></span>
+                                                    <!-- ID of select should match to ID of radio without "Radio" prefix -->
+                                                    <select id="commonGeneratorSelectReportGenerator"></select>
+                                                    <span class="message warning">error message here</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </fieldset>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div id="commonGeneratorSelectTemplateDialog" class="panel dialog overlay detail centered_horz centered_vert moveable hidden sizeable">
+
+                        <div class="sizer diagonal"></div>
+
+                        <div class="content hasFooter ">
+
+
+                            <div class="header mover">
+                                <div class="title">
+
+                                    <span>Select Template</span>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="body  ">
+
+
+
+
+
+
+
+
+
+
+
+
+                                <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <div class="control groupBox">
+
+
+
+
+                                    <div class="content ">
+
+                                        <div class="header ">
+                                            <div class="title">
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="body  ">
+
+
+                                            <ul class="responsive collapsible folders hideRoot" id="commonGeneratorSelectTemplateDialogTree"></ul>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="footer ">
+
+                                <button id="commonGeneratorSelectTemplateDialogOkTemplate" class="button action primary up"><span class="wrap">OK</span><span class="icon"></span></button>
+                                <button id="commonGeneratorSelectTemplateDialogCloseTemplate" class="button action primary up"><span class="wrap">Close</span><span class="icon"></span></button>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="footer ">
+
+                    <button id="reportGeneratorPropertiesBtnOk" class="button action primary up"><span class="wrap">OK</span><span class="icon"></span></button>
+                    <button id="reportGeneratorPropertiesBtnCancel" class="button action up"><span class="wrap">Cancel</span><span class="icon"></span></button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <!-- dimmer - for modal dialogs -->
+        <div id="pageDimmer" class="dimmer hidden"></div>
+
+        <!-- loading cue -->
+        <!--/WEB-INF/jsp/templates/loading.jsp revision A-->
+        <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="loading" class="panel dialog loading overlay moveable centered_horz centered_vert hidden">
+
+
+
+
+            <div class="content ">
+
+                <div class="header mover">
+                    <div class="title">
+                        Please Wait
+                    </div>
+
+
+                </div>
+
+                <div class="body  ">
+
+
+                    <p class="message">Loading&#8230;</p>
+                    <button id="cancel" class="button action up"><span class="wrap">Cancel</span><span class="icon"></span></button>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- ajax alert popup dialog -->
+        <!--/WEB-INF/jsp/templates/standardAlert.jsp revision A-->
+        <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="standardAlert" class="panel dialog overlay standardAlert moveable centered_horz centered_vert sizeable hidden">
+
+            <div class="sizer diagonal"></div>
+
+            <div class="content hasFooter ">
+
+
+                <div class="header mover">
+                    <div class="title">
+                        Error Details
+                    </div>
+
+
+                </div>
+
+                <div class="body  ">
+
+
+
+                    <div id="errorPopupContents"></div>
+
+
+
+                </div>
+
+                <div class="footer ">
+
+                    <button id="" class="button action primary up"><span class="wrap">Close</span><span class="icon"></span></button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <iframe id="ajax-download-iframe" style="visibility:hidden"></iframe>
+
+
+        <iframe id="ajax-upload-iframe" style="visibility:hidden" src="about:blank"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--/WEB-INF/jsp/templates/heartbeatOptin.jsp revision A-->
+        <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="heartbeatOptin" class="panel dialog overlay heartbeatOptin moveable centered_horz centered_vert hidden">
+
+
+
+            <div class="content hasFooter ">
+
+
+                <div class="header mover">
+                    <div class="title">
+                        Heartbeat Data Collection
+                    </div>
+
+
+                </div>
+
+                <div class="body  ">
+
+
+                    <p class="message">Please help us build better products by opting in to the Heartbeat.</p>
+                    <p class="message">By allowing the Heartbeat to collect data, you confirm consent, where relevant, from all individual users
+                        in your organization.</p>
+                    <p class="message">The Heartbeat enables TIBCO Jaspersoft to collect anonymous system information and may be disabled at
+                        any time. The Heartbeat data is used for the purposes set forth in the TIBCO Jaspersoft Heartbeat
+                        Privacy Policy web page at <a target="_blank" href="http://www.jaspersoft.com/heartbeat">www.jaspersoft.com/heartbeat</a>.</p>
+                    <p
+                    class="message"> Our privacy policy is at <a target="_blank" href="http://www.jaspersoft.com/privacy">www.jaspersoft.com/privacy</a>.</p>
+                        <div class="control checkBox">
+                            <label class="wrap" for="heartbeatCheck" title="Opt-in to the collection of heartbeat data">
+                                Opt in for JasperReports Server Heartbeat
+                            </label>
+                            <input class="" id="heartbeatCheck" type="checkbox" checked="checked" />
+                        </div>
+
+
+                </div>
+
+                <div class="footer ">
+
+                    <button id="" class="button action primary up"><span class="wrap">OK</span><span class="icon"></span></button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--/WEB-INF/jsp/templates/aboutBox.jsp revision A-->
+        <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="aboutBox" class="panel dialog aboutBox overlay moveable centered_horz centered_vert hidden centered_vert centered_horz">
+
+
+
+            <div class="content hasFooter ">
+
+
+                <div class="header mover">
+                    <div class="title">
+                        About TIBCO JasperReports Server
+                    </div>
+
+
+                </div>
+
+                <div class="body  ">
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!--/WEB-INF/jsp/templates/container.jsp revision A-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="control groupBox fillParent">
+
+
+
+
+                        <div class="content ">
+
+                            <div class="header ">
+                                <div class="title">
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="body  ">
+
+
+
+                                <p class="message">Product Edition:&nbsp;<span class="emphasis">Enterprise</span></p>
+
+                                <p class="message">Features: <span class="emphasis">Fusion AHD EXP DB AUD MT </span></p>
+
+                                <p class="message">Product Version: <span class="emphasis">6.1</span></p>
+                                <p class="message">Build: <span class="emphasis">20150527_1447</span></p>
+
+                                <p class="message">License Type: <span class="emphasis">Development</span></p>
+                                <p class="message">Expiration: <span class="emphasis">2018-03-26 19:59:00</span></p>
+
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="footer ">
+
+                    <button class="button action primary up"><span class="wrap">Close</span><span class="icon"></span></button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <script type="text/javascript">
+            //common URL context
+            var urlContext = "/jasperserver-pro";
+
+
+            var defaultSearchText = "";
+            var serverIsNotResponding = "The server is slow or isn't responding. Confirm that you want to continue.";
+
+            var commonReportGeneratorsMetadata = [];
+        </script>
+
+
+        <script type="text/json" id="navigationActionModel">
+            {"main_home_mutton":[],"main_library_mutton":[],"main_view_mutton":[{"type": "selectAction","text": "View","children": [{"type":
+            "optionAction","text": "Search Results","action": "primaryNavModule.navigationOption","actionArgs": ["search"]},{"type":
+            "optionAction","text": "Repository","action": "primaryNavModule.navigationOption","actionArgs": ["browse"]},{"type":
+            "optionAction","text": "Messages","action": "primaryNavModule.navigationOption","actionArgs": ["event"]}]}],"main_create_mutton":[{"type":
+            "selectAction","text": "Create","children": [{"type": "optionAction","text": "Ad Hoc View","action": "primaryNavModule.navigationOption","actionArgs":
+            ["designer"]},{"type": "optionAction","text": "Report","action": "JRS.CreateReport.selectADV","actionArgs": ["createReport"]},{"type":
+            "optionAction","text": "Dashboard","action": "primaryNavModule.navigationOption","actionArgs": ["dashboard"]}]}]}
+        </script>
+        <div class="hidden">
+            <p class="action">&nbsp;</p>
+            <p class="action over">&nbsp;</p>
+            <p class="action pressed">&nbsp;</p>
+            <p class="action primary">&nbsp;</p>
+            <p class="action primary over">&nbsp;</p>
+            <p class="action primary pressed">&nbsp;</p>
+        </div>
+    </div>
+</body>
+
+
+
+</html>

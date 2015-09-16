@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Fleet Control</title>
+    <link rel='stylesheet' href='https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'>
+    <script src='https://code.jquery.com/jquery-1.10.2.js'></script>
+    <script src='https://code.jquery.com/ui/1.11.4/jquery-ui.js'></script>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+        
+        .highlight-selected {
+            background-color: yellow;
+            color: green;
+        }
+        .selected{
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='tabs'>
+        <ul>
+            <li><a href='#available'>Available</a></li>
+            <li><a href='#selected'>Selected</a></li>
+        </ul>
+        <div id='available'>
+            <ul>
+
+                <li class="all" data-index='0' title='All Vehicles | 3999'>
+                    <a>All Vehicles | 3999</a>
+                </li>
+
+                <li data-index='1' title='Pilot Fleet | 2'>
+                    <a>Pilot Fleet | 2</a>
+                </li>
+
+                <li data-index='2' title='Chicago Fleet | 12'>
+                    <a>Chicago Fleet | 12</a>
+                </li>
+
+                <li  data-index='3' title='Ft. Worth | 11'>
+                    <a>Ft. Worth | 11</a>
+                </li>
+
+                <li data-index='4' title='System Gangs | 11'>
+                    <a>System Gangs | 11</a>
+                </li>
+
+                <li data-index='5' title='Transportation | 10'>
+                    <a>Transportation | 10</a>
+                </li>
+
+                <li data-index='6' title='KC448 | 3'>
+                    <a>KC448 | 3</a>
+                </li>
+
+                <li  data-index='7' title='UPC01 - UNION PACIFIC CORPORATION | 3179'>
+                    <a>UPC01 - UNION PACIFIC CORPORATION | 3179</a>
+                </li>
+
+            </ul>
+        </div>
+        <div id='selected'>
+            <ul>
+                <li data-index='7' title='UPC01 - UNION PACIFIC CORPORATION | 3179'>
+                    <a>UPC01 - UNION PACIFIC CORPORATION | 3179</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+       <div id='extra-controls'>
+        <a id="select-all" href='#select-all'>Select All</a>
+        <a id="deselect" href='#deselect'>Deselect All</a>
+       </div>
+
+    <script>
+        
+        
+        $(document).ready(function(){
+            
+            
+            //Tabs
+            $( '#tabs' ).tabs();
+            
+            function removeAllHighlightLink(){
+                $('#available .all').removeClass('selected');
+            }
+            
+            //Select All
+            function selectAllLink(){
+                $('#available li').not('.all').removeClass('selected');
+                $('#available .all').toggleClass('selected');
+                copyToSelected();
+            };
+            
+            function copyToSelected(){
+                var selectAll = $('#available li').not('.all').clone();
+                $('#selected ul').replaceWith(selectAll);
+            }
+            
+            function selectAll(){
+                removeAllHighlightLink();
+                $('#available li').not('.all').removeClass('selected');
+                $('#available li').not('.all').addClass('selected');
+                copySelected();
+            };
+            
+            //Unselect Methods
+            function unselectAll(){
+                removeAllHighlightLink();
+                $('#available li').not('.all').removeClass('selected');
+                $('#selected ul').empty();
+            }
+            
+            function copySelected(){
+                var selectedLinks =$('#available .selected').clone();
+                console.log(selectedLinks.html());
+                $('#selected ul').html(selectedLinks);
+            }
+            
+            $('#available .all').on("click", function(){
+               selectAllLink();
+            });
+            
+            //Highlight
+            $('#available li').hover(function(){
+                    $(this).toggleClass('highlight-selected');
+                });
+            
+            //Select One
+            //Requirements: 
+            //1. Clicking individual link removes all vehicles if selected
+            $('#available li').not('.all')
+                .on('click', function(){
+                    $(this).toggleClass('selected');
+                    removeAllHighlightLink();
+                    copySelected();
+                });
+                
+                //Extra Controls
+                //Select All
+                $('#select-all').on('click', function(){
+                   selectAll(); 
+                });
+                
+                $('#deselect').on('click', function(){
+                   unselectAll(); 
+                });
+                
+        });
+    </script>
+
+</body>
+
+</html>
